@@ -1,0 +1,37 @@
+//- Vista del formulario para llenar con los datos ingresados por los usuarios
+doctype html
+html(lang="es")
+  head
+    title Formulario
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/styles/form.css") 
+    link(rel="icon", href="/assets/navigate-sharp.svg")
+  body
+    h1 Formulario
+    //- errors es la lista que se recibe del servidor si hay errores al hacer el submit de los datos ingresados
+    //- se recorre la lista para mostrar los errores si han habido
+    if errors 
+      ul.error-list 
+        each error in errors
+          li= error
+    //-formulario para que el usuario ingrese los datos requeridos
+    form(action="/submit", method="POST") 
+      label(for="nombre") Nombre:
+      br
+      div 
+        input(type="text", id="nombre", name="name", value=name || '' required)
+      br
+      label(for="edad") Edad:
+      br
+      div 
+        input(type="text", id="edad", name="age", value=age || '' required)
+      br
+      label(for="email") Correo Electrónico:
+      br
+      div(class="last")
+        input(type="email", id="email", name="email", value=email || ' ' required)
+      br
+      br
+      input(type="submit", value="Enviar" class="btn") 
+      //- boton para enviar los datos ingresados a una pagina de confirmacion

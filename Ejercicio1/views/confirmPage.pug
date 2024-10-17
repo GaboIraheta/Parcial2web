@@ -1,0 +1,18 @@
+//- Vista de la pagina de confirmacion en donde se muestran los datos ingresados por el usuario y la confirmacion de envio
+doctype html
+html(lang="es")
+  head
+    title Confirmación
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/styles/confirmPage.css") 
+    link(rel="icon", href="/assets/checkmark-done-sharp.svg")
+  body
+    h1 Confirmación de Envío
+    p Formulario enviado exitosamente!
+    div 
+      p <strong>Nombre:</strong> #{user.name} 
+      p <strong>Edad:</strong> #{user.age}
+      p <strong>Correo Electrónico:</strong> #{user.email} 
+    a(href="/") Volver a la página principal 
+    //- enlace para regresar a la pagina principal de la aplicacion luego de recibir la confirmacion

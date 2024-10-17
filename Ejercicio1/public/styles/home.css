@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  margin-top: 5em;
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(106, 106, 106);
+}
+
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  color: yellow;
+}
+
+.container p {
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn:hover {
+  background-color: #45a049;
+}

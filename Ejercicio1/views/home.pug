@@ -1,0 +1,15 @@
+//-Vista de la pagina principal home, que es la ruta especificada como raiz
+doctype html
+html(lang="es")
+  head
+    title Pagina principal
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/styles/home.css") 
+    link(rel="icon", href="/assets/home-outline.svg")
+  body
+    div(class="container")
+      h1 Bienvenido 
+      p Pagina principal. Presiona el boton de abajo para ir al formulario.
+    a(href="./form", class="btn") Formulario 
+    //-boton que redirecciona al usuario al formulario
